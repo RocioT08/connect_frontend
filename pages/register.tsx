@@ -134,7 +134,7 @@ export default function Register() {
                 (passwordsMatch ? 'border-gray-300' : 'border-red-500') 
                 : 'border-gray-300'
             }`}          
-          type="confirmPassword"
+          type="password"
           placeholder="Confirm password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
@@ -145,7 +145,7 @@ export default function Register() {
         <button disabled={!isFormValid} 
         className={`text-white p-3 rounded-lg font-medium transition-all ${
             isFormValid 
-              ? 'bg-primary hover:bg-blue-700 cursor-pointer' 
+              ? 'bg-blue-600 hover:bg-blue-700 cursor-pointer' 
               : 'bg-blue-400 cursor-not-allowed'
           }`}>
           Create an Account</button>
