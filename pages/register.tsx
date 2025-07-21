@@ -128,6 +128,7 @@ export default function Register() {
         </div>
         <div className="mb-2">
           <label htmlFor="confirmPassword" className="block mb-2 text-sm font-medium text-gray-900">Confirm password</label>
+          
           <input
           className={`border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ${
               confirmPassword !== '' ? 
@@ -140,6 +141,14 @@ export default function Register() {
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
           />
+            {confirmPassword !== '' && (
+            <div className="mt-2 flex items-center gap-2">
+              <ValidationIcon isValid={passwordsMatch} />
+              <span className={`text-sm ${passwordsMatch ? 'text-green-600' : 'text-red-600'}`}>
+                {passwordsMatch ? 'Passwords match' : 'Passwords must match'}
+              </span>
+            </div>
+          )}
         </div>
              
         <button disabled={!isFormValid} 
