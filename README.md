@@ -47,6 +47,8 @@ Full API for user registration, login, and CRUD operations on tasks (including a
 
 ---
 
+⚠️ Note: The backend is hosted on a free Render instance. If it hasn't received traffic in the past few minutes, it may take a few seconds to respond the first time it's accessed.
+
 ## Feedback
 
 Built by [Rocio Tutillo](https://github.com/RocioT08). 😊 
